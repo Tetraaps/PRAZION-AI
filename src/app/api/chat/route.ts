@@ -1,4 +1,4 @@
-OpenAI from "openai";
+import OpenAI from "openai";
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
