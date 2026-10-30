@@ -4,7 +4,7 @@ import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
-const schema = z.obimportject({
+const schema = z.object({
   conversationId: z.string().uuid().optional(),
   message: z.string().trim().min(1).max(30000),
   provider: z.enum(["openai", "anthropic"]).optional(),
